@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MLBB PAGE</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    /* General styles */
+
+    body {
+      background-color: #1a1a75;
+      background-repeat: no-repeat;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      font-weight: bold;
+      background-position: right bottom, left top;
+      background-repeat: no-repeat, repeat;
+      color: #f2f5f7;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      padding: 10px;
+      margin: 0;
+      font-size: 3rem;
+      color: #f2f5f7;
+      font-weight: bold;
+      text-transform: uppercase;
+      text-align: center;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    nav {
+      height: 5.5rem;
+      width: 100%;
+      background-color: #003366;
+      box-shadow: 0 3px 20px rgba(92, 73, 73, 0.2);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: fixed;
+      z-index: 1000;
+      top: 0;
+      animation: slideDown 0.5s ease forwards;
+    }
+
+    .navbar-brand {
+      color: #01939c;
+      font-size: 1.5rem;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      margin-right: 20px;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .nav-links li {
+      margin: 0 10px;
+    }
+
+    .nav-links li a {
+      text-decoration: none;
+      color: #f2f5f7;
+      text-transform: uppercase;
+      font-weight: bold;
+      font-size: 14px;
+    }
+
+    .nav-links li a:hover {
+      color: #61DAFB;
+    }
+
+    .play-button {
+      background-color: transparent;
+      border: 1.5px solid #f2f5f7;
+      border-radius: 2em;
+      padding: 8px 16px;
+      font-size: 14px;
+      cursor: pointer;
+      margin-left: 20px;
+      animation: fadeIn 1s ease 0.5s forwards;
+    }
+
+    /* Media query for collapsing nav links */
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+      }
+    }
+
+    /* Jumbotron animation */
+    .jumbotron {
+      padding-top: 55px; /* Adjust this value as needed */
+      animation: scaleUp 0.5s ease 0.5s forwards;
+    }
+
+    /* Animation keyframes */
+
+    @keyframes slideDown {
+      0% {
+        transform: translateY(-100%);
+      }
+      100% {
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes fadeIn {
+      0% {
+        opacity: 1;
+        transform: translateY(-20px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @keyframes scaleUp {
+      0% {
+        transform: scale(0.5);
+      }
+      100% {
+        transform: scale(1s);
+      }
+    }
+
+  
+
+    .section {
+      padding: 50px 0;
+      animation: fadeIn 1s ease forwards;
+    }
+
+    .section-heading {
+      font-size: 2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+      animation: slideInLeft 1s ease forwards;
+    }
+
+    .section-content {
+      text-align: center;
+      animation: slideInRight 2.6s ease forwards;
+    }
+
+    .img-fluid {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: auto;
+      animation: zoomIn 1s ease forwards;
+    }
+
+    @keyframes slideInLeft {
+      0% {
+        opacity: 1;
+        transform: translateX(-100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes slideInRight {
+      0% {
+        opacity: 0;
+        transform: translateX(100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    @keyframes zoomIn {
+      0% {
+        opacity: 1;
+        transform: scale(0.5);
+      }
+      100% {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          MLBB
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav nav-links">
+            <li class="nav-item">
+              <a class="nav-link" href="#">For you</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Patch</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Esports</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Bulletin</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Events</a>
+            </li>
+          </ul>
+          <button class="play-button" href="">PLAY</button>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <div class="container mt-5">
+    <div class="jumbotron">
+      <h1>Welcome To MLBB Page</h1>
+      <h2>Project Next</h2>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 section-content">
+            <h2 class="section-heading">Patch Update Incoming</h2>
+            <p>Stay tuned for the latest news and events in the world of Mobile Legends.</p>
+            <img src="patch.jpg" class="img-fluid" alt="Patch Update">
+          </div>
+          <div class="col-md-4 section-content">
+            <!-- Second column content -->
+          </div>
+          <div class="col-md-4 section-content">
+            <!-- Third column content -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <h2 class="section-heading">Featured Hero</h2>
+        <h2 class="section-heading">ZHUXIN</h2>
+        <p class="section-content">Discover powerful heroes with unique abilities to dominate the battlefield. Zhuxin's
+          Lantern can inflict high sustained damage to enemies, and should they linger around for too long, they will be
+          knocked airborne. She can also recover a large amount of Mana from the butterflies, granting her abilities to
+          chip away her enemies with skills.
+        </p>
+        <img src="zhuxin.png" class="img-fluid" alt="Zhuxin">
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <h2 class="section-heading">Coupon Pass</h2>
+        <p class="section-content">Get your discount with ease.</p>
+        <p class="section-content">Spend Less For More Skins</p>
+        <div class="row">
+          <div class="col-md-6 section-content">
+            <img src="coupon.jpg" class="img-fluid" alt="Coupon">
+          </div>
+          <div class="col-md-6 section-content">
+            <img src="couponnn.jpg" class="img-fluid" alt="Coupon">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <h2 class="section-heading">Yu Zhong Hero Revamp</h2>
+        <p class="section-content">For Yu Zhong's Human Form, we accented trails of both humans and black dragon on him. For
+          his Dragon form, we amplified the elements of power and agression.</p>
+        <div class="row">
+          <div class="col-md-6 section-content">
+            <img src="yz.jpg" class="img-fluid" alt="Yu Zhong Normal">
+          </div>
+          <div class="col-md-6 section-content">
+            <img src="yzrevamp.jpg" class="img-fluid" alt="Yu Zhong Revamp">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <div class="container">
+        <h2 class="section-heading">PROJECT NEXT Revamp Equipment Overview</h2>
+        <img src="item.jpg" class="img-fluid" alt="Equipment 1">
+        <img src="items2.jpg" class="img-fluid" alt="Equipment 2">
+      </div>
+    </div>
+
+    <footer class="text-center mt-5">
+      <p>No copyright infringement is intended. I do not own nor claim to own the rights to any of the [type of content]
+        shared. For Educational Purposes Only.</p>
+    </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
